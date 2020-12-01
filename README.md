@@ -63,7 +63,7 @@ Junto com a classe há um programa 'teste.py' o qual demonstra lendo uma gramát
 from cyk import regra, cyk
 
 gramatica = []
-with open ('regras.txt', 'r') as reader:
+with open ('gramatica.txt', 'r') as reader:
     for linha in reader:
         a = linha.split()
         a.remove('=>')
