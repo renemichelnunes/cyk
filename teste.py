@@ -7,6 +7,8 @@ gramatica = []
 with open ('regras.txt', 'r') as reader:
     for linha in reader:
         a = linha.split()
+        a.remove('=>')
+        a.remove('|')
         gramatica.append(a)
 
 c = cyk()
