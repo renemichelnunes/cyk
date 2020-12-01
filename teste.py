@@ -4,7 +4,7 @@
 from cyk import regra, cyk
 
 gramatica = []
-with open ('regras.txt', 'r') as reader:
+with open ('gramatica.txt', 'r') as reader:
     for linha in reader:
         a = linha.split()
         a.remove('=>')
