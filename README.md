@@ -7,7 +7,7 @@ A classe 'cyk.py' pode ser utilizada da seguinte maneira:
   - 'incluir_regra(regra)', basta passar uma regra como parâmetro, isso é adicionado à uma lista que representa a gramática.
   - 'imprime()', o qual lista a gramática.
   - 'testa_palavra(palavra)', testa uma string que representa a cadeia de simbolos a ser verificada pela gramática. Como resultado é impressa uma matriz que representa o teste da cadeia de símbolos sobre a gramática, assim como uma mensagem afirmando se a cadeia pertençe a gramática ou não.
-  -'detalhes=True', uma variável usada para mostrar mais detalhes do processo.
+  - 'detalhes=True', uma variável usada para mostrar mais detalhes do processo.
 
 ```
 from cyk import regra, cyk
