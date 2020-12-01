@@ -46,7 +46,6 @@ Tabela CYK:
 palavra "baaba" pertence à gramática
 ```
 Ou lendo um arquivo de texto com a gramática declarada da seguinte forma:
-gramatica.txt
 
 ```
 S => AB | BC
