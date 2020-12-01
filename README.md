@@ -49,10 +49,10 @@ Ou lendo um arquivo de texto com a gramática declarada da seguinte forma:
 gramatica.txt
 
 ```
-S AB BC
-A BA a
-B CC b
-C AB a
+S => AB | BC
+A => BA | a
+B => CC | b
+C => AB | a
 ```
-Onde 'S' é o identificador da regra e AB BC os parâmetros, por exemplo, S->AB|BC é escrito como 'A AB BC' separados por espaços. A classe sempre identifica o primeiro parâmetro como sendo o identificador da regra e assim por diante com 'A BA a' como (A->BA|a)...
+Onde 'S' é o identificador da regra e AB | BC os parâmetros.
 Junto com a classe há um programa 'teste.py' o qual demonstra lendo uma gramática a partir de um arquivo de texto.
