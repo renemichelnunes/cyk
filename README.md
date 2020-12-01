@@ -55,4 +55,28 @@ B => CC | b
 C => AB | a
 ```
 Onde 'S' é o identificador da regra e AB | BC os parâmetros.
-Junto com a classe há um programa 'teste.py' o qual demonstra lendo uma gramática a partir de um arquivo de texto.
+Junto com a classe há um programa 'teste.py' o qual demonstra lendo uma gramática a partir de um arquivo de texto. O conteúdo é o seguinte:
+```
+# -*- coding: utf-8 -*-
+# Use a versão 3 ou superior do python
+
+from cyk import regra, cyk
+
+gramatica = []
+with open ('regras.txt', 'r') as reader:
+    for linha in reader:
+        a = linha.split()
+        a.remove('=>')
+        a.remove('|')
+        gramatica.append(a)
+
+c = cyk()
+for i in gramatica:
+    a = i.pop(0)
+    reg = regra(a, i)
+    c.incluir_regra(reg)
+
+c.testa_palavra('baaba')   
+c.testa_palavra('baabaa')  
+```
+
