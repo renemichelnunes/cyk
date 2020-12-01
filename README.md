@@ -79,4 +79,36 @@ for i in gramatica:
 c.testa_palavra('baaba')   
 c.testa_palavra('baabaa')  
 ```
+Com o resultado:
+```
+~$ python3 teste.py 
+Gramática:
+S -> ['AB', 'BC']
+A -> ['BA', 'a']
+B -> ['CC', 'b']
+C -> ['AB', 'a']
 
+Tabela CYK:
+[['B'], ['A', 'C'], ['A', 'C'], ['B'], ['A', 'C']]
+[['A', 'S'], ['B'], ['S', 'C'], ['A', 'S']]
+[[], ['B'], ['B']]
+[[], ['S', 'C', 'A']]
+[['S', 'A', 'C']]
+
+palavra "baaba" pertence à gramática
+Gramática:
+S -> ['AB', 'BC']
+A -> ['BA', 'a']
+B -> ['CC', 'b']
+C -> ['AB', 'a']
+
+Tabela CYK:
+[['B'], ['A', 'C'], ['A', 'C'], ['B'], ['A', 'C'], ['A', 'C']]
+[['A', 'S'], ['B'], ['S', 'C'], ['A', 'S'], ['B']]
+[[], ['B'], ['B'], []]
+[[], ['S', 'C', 'A'], ['A', 'S']]
+[['S', 'A', 'C'], ['B']]
+[['B']]
+
+palavra "baabaa" não pertence à gramática
+```
